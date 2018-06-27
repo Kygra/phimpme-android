@@ -46,6 +46,8 @@ android {
         exclude 'META-INF/maven/org.apache.maven.wagon/wagon-http-shared/pom.properties'
         exclude 'META-INF/maven/*'
         exclude 'org/codehaus/classworlds/uberjar/boot/Bootstrapper.class'
+        doNotStrip '*/mips/*.so'
+        doNotStrip '*/mips64/*.so'
     }
 
     configurations {

@@ -26,4 +26,9 @@
     <string name="preference_internal_uri_extsdcard_photos">uri_extsdcard_photos</string>
     <string name="preference_show_fab">show_fab</string>
     <string name="preference_sub_scaling">use_sub_scaling</string>
+
+    <string name="drone_album_name">DJI_SDK_DCIM_Fotos</string>
+    <string name="drone_album_location">/storage/emulated/0/Pictures/DJI_SDK_DCIM_Fotos</string>
+    <string name="drone_album_location_root">/storage/emulated/0</string>
+
 </resources>

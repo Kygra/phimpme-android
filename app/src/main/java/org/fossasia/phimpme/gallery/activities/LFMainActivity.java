@@ -387,7 +387,11 @@ public class LFMainActivity extends SharedMediaActivity {
     public void populateAlbum() {
         albList = new ArrayList<>();
         for (Album album : getAlbums().dispAlbums) {
-            albList.add(album);
+            Log.d("populateAlbum",album.getPath().toString());
+            if(album.getPath().contains(getString(R.string.drone_album_location))){
+                Log.d("populateAlbumENTROU",album.getPath().toString());
+                albList.add(album);
+            }
         }
     }
 
@@ -598,6 +602,11 @@ public class LFMainActivity extends SharedMediaActivity {
         public void onClick(View v) {
             fromOnClick = true;
             final Album album = (Album) v.findViewById(R.id.album_name).getTag();
+
+            //TODO HR
+            Log.d("album", v.findViewById(R.id.album_name).getTag().toString());
+
+
             //int index = Integer.parseInt(v.findViewById(R.id.album_name).getTag().toString());
             if (editMode) {
                 albumsAdapter.notifyItemChanged(getAlbums().toggleSelectAlbum(album));
@@ -767,6 +776,17 @@ public class LFMainActivity extends SharedMediaActivity {
                 return LFMainActivity.super.onNavigationItemSelected(item);
             }
         });
+
+        //Aqui eu seto a exibição do álbum que eu quero, o que
+        HandlingAlbums albuns = getAlbums();
+        for (Album a : albuns.dispAlbums){
+            Log.d("getalbums",a.getPath());
+            if(a.getPath().contains(getString(R.string.drone_album_location))){
+                getAlbums().setCurrentAlbum(a);
+                displayCurrentAlbumMedia(true);
+                break;
+            }
+        }
     }
 
     @Override

@@ -19,7 +19,7 @@ import java.util.ArrayList;
 public class Affix {
 
     // A common editor folder
-    private static final String DIRECTORY_NAME = "phimpme-edit";
+    private static final String DIRECTORY_NAME = "DJI_SDK_DCIM_Fotos";
 
     public static void AffixBitmapList(Context ctx, ArrayList<Bitmap> bitmapArray, Options options) {
 

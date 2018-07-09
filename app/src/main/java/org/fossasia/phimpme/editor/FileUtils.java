@@ -17,7 +17,7 @@ import java.io.IOException;
  * 
  */
 public class FileUtils {
-	public static final String FOLDER_NAME = "phimpme-edit";
+	public static final String FOLDER_NAME = "DJI_SDK_DCIM_Fotos";
 
 	/**
 	 *Get storage file folder path

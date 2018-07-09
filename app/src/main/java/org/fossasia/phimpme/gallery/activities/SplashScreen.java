@@ -75,8 +75,10 @@ public class SplashScreen extends SharedMediaActivity {
         setStatusBarColor();
 
         GifDrawable gifDrawable = null;
+
+
         try {
-            gifDrawable = new GifDrawable( getAssets(), "splash_logo_anim.gif" );
+            gifDrawable = new GifDrawable( getAssets(), "text-animation-0.2s-808x122px.gif" );
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -95,6 +97,7 @@ public class SplashScreen extends SharedMediaActivity {
             });
         }
         logoView.setImageDrawable(gifDrawable);
+
 
         if (PermissionUtils.isDeviceInfoGranted(this)) {
             PICK_INTENT = getIntent().getAction().equals(Intent.ACTION_GET_CONTENT) || getIntent().getAction().equals(Intent.ACTION_PICK);
